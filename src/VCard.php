@@ -513,6 +513,23 @@ class VCard
     }
 
     /**
+     * Add source
+     *
+     * @param $url
+     * @return $this
+     */
+    public function addSource($url)
+    {
+        $this->setProperty(
+            'source',
+            'SOURCE',
+            $url
+        );
+
+        return $this;
+    }
+
+    /**
      * Build VCard (.vcf)
      *
      * @return string
